@@ -1,0 +1,34 @@
+mixin page01 ()
+	-
+		const data = {
+			title: "Please confirm your year of birth",
+			form: {
+				month: {
+					inputType: "text",
+					inputPlaceholder: "mm",
+					inputMinLength: 2,
+				},
+				day: {
+					inputType: "text",
+					inputPlaceholder: "dd",
+					inputMinLength: 2,
+				},
+				year: {
+					inputType: "text",
+					inputPlaceholder: "yyyy",
+					inputMinLength: 4,
+				},
+				btn: "confirm",
+			}
+		}
+	section.page01
+		.container 
+			.page01__wrapper
+				h1.page01__title=data.title
+			.page01__form(data-validate)
+				form(action="#", method="post")
+					fieldset.page01__form-fieldset
+						+custom-input(data.form.month).page01__form-input.page01__form-input--month(data-validate-type="text")
+						+custom-input(data.form.day).page01__form-input.page01__form-input--day(data-validate-type="text")
+						+custom-input(data.form.year).page01__form-input.page01__form-input--year(data-validate-type="text")
+					button.btn.btn--submit.page01__form-btn(type="submit")=data.form.btn
