@@ -1,27 +1,69 @@
 .main-nav {
-  &__list {
-    display: flex;
-    margin: 0;
-    margin-right: 20px;
-    margin-left: 60px;
-    padding: 0;
-
-    list-style: none;
-  }
-
-  &__item {
-    margin-right: 20px;
-  }
-
-  &__link {
-    color: $color-default-white;
-
-    &.is-active {
-      opacity: 0.6;
+  width: 100%;
+  min-height: 4.88em;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  margin: 0 auto;
+  &__wrapper {
+    width: calc(100% - 2*25px);
+    max-width: 435px;
+    padding: 1em 0.6em;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(18px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 24px 24px 0px 0px;
+    @include vp-768 {
+      width: calc(100% - 2 * 80px);
     }
   }
-
-  &__toggle {
-    display: none;
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &-item {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      flex: 1;
+      &:not(:last-of-type) {
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 1px;
+          height: 100%;
+          background-color: $color-default-white;
+          opacity: 0.2;
+          position: absolute;
+          top: 0;
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+    &-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: $color-default-white;
+      &-name {
+        font-weight: 400;
+        font-size: 0.55em;
+        line-height: 160%;
+        color: #ffffff;
+        opacity: 0.5;
+      }
+      &.is-active {
+        opacity: 0.6;
+      }
+    }
   }
 }

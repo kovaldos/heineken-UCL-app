@@ -28,8 +28,10 @@ html(lang="ru")
 
       if (hasFooter)
         +footer(footerMods)
-
+      +modal("modal-how-to-play")(data-modal="how-to-play")
+        +modal-how-to-play()
     block modals
+
 
     script(src="js/vendor.min.js")
     script(src="js/main.min.js")

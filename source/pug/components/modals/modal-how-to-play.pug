@@ -1,0 +1,31 @@
+mixin modal-how-to-play()
+	-
+		const data = {
+			title: "How to play?",
+			items: [
+				{
+					src: "how-to-play-pic-1",
+					alt: "soccer ball in heineken colors over a small pitch",
+					text: "Point the camera of your device at a flat surface and place the ball.",
+				},
+				{
+					src: "how-to-play-pic-2",
+					alt: "soccer ball inside a green circle",
+					text: "Tap on screen when green circle appears to mint the ball.",
+				},
+				{
+					src: "how-to-play-pic-3",
+					alt: "soccer ball inside a red circle",
+					text: "Hit the red circle on time to perform the superfeint",
+				},
+			],
+		}
+
+	.how-to-play
+		.how-to-play__wrapper
+			h2.how-to-play__title=data.title
+			ul.how-to-play__list
+				each item in data.items
+					li.how-to-play__list-item
+						+picture("content", item.src, "png", 92, 92, item.alt).how-to-play__list-pic
+						p.how-to-play__text=item.text

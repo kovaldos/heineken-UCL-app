@@ -1,0 +1,24 @@
+mixin screen03 ()
+	-
+		const data = {
+			title: {
+				title1: "Play the Ar game and get a chance to ",
+				title2: "win tickets ",
+				title3: "to the Champions League Final",
+			},
+			btn: {
+				tag: "button",
+				text: "play",
+			}
+			
+		}
+	
+	section.screen.screen03
+		.container
+			.screen__pic
+				+icon("UCL-pic", 151, 248)
+			h1.screen03__title
+				span.screen03__title-span.screen03__title-span--start=data.title.title1
+				span.screen03__title-span.screen03__title-span--middle=data.title.title2
+				span.screen03__title-span.screen03__title-span--end=data.title.title3
+			+btn(data.btn).screen03__btn

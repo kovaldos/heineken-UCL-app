@@ -17,14 +17,14 @@ mixin header(headerMods, currentUrl)
 
   header.header(class=headerMods)
     .container.header__container
-      if(currentUrl === "index.html")
+      //- if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo.header__logo--heineken-zero
-          +icon("logo-heineken-zero", 70, 50)
-        span.header__logo.header__logo--ucl
-          +icon("logo-UCL", 53, 50)
-        span.header__logo.header__logo--heineken
-          +icon("logo-heineken", 76, 40)
+      span.header__logo.header__logo--heineken-zero
+        +icon("logo-heineken-zero", 70, 50)
+      span.header__logo.header__logo--ucl
+        +icon("logo-UCL", 53, 50)
+      span.header__logo.header__logo--heineken
+        +icon("logo-heineken", 76, 40)
       //- else
       //-   a.header__logo(href="index.html", aria-label="Переход на главную")
       //- nav.main-nav

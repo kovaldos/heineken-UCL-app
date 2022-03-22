@@ -1,0 +1,12 @@
+mixin privacy-policy ()
+	-
+		const data = {
+			title: "Privacy policy:",
+			text01: "By clicking submit you agree to send your info to Heineken SA who agrees to use it according to their privacy. View Heineken data policy here",
+			text02: "By clicking submit, you give Heineken the right to share future marketing material with you",
+		}
+
+	.privacy-policy
+		h2.privacy-policy__title=data.title 
+		p.privacy-policy__text.privacy-policy__text--top=data.text01
+		p.privacy-policy__text.privacy-policy__text--bottom=data.text02

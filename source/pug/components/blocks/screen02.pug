@@ -1,0 +1,49 @@
+mixin screen02 ()
+	-
+		const data = {
+			title: "Submit your details to stand to WIN*",
+			form: {
+				firstName: {
+					inputType: "text",
+					inputName: "firstName",
+					inputPlaceholder: "David",
+					inputMinLength: 2,
+					inputMaxLength: 20,
+					inputError: "Enter your name",
+				},
+				tel: {
+					inputType: "phone",
+					inputName: "tel",
+					inputPlaceholder: "contact number",
+					inputError: "Enter a valid phone number",
+					//- inputMinLength: ,
+					//- inputMaxLength: ,
+				},
+				email: {
+					inputType: "email",
+					inputName: "email",
+					inputPlaceholder: "email",
+					inputError: "Enter a valid email",
+					//- inputMinLength: 4,
+					//- inputMaxLength: 4,
+				},
+				btn: "Submit",
+			},
+			privacy: {
+				title: "Privacy policy:",
+				text01: "By clicking submit you agree to send your info to Heineken SA who agrees to use it according to their privacy. View Heineken data policy here",
+				text02: "By clicking submit, you give Heineken the right to share future marketing material with you",
+			}
+		}
+	section.screen.screen02
+		.container 
+			.screen__wrapper
+				h1.screen__title=data.title
+			.screen__form.screen02__form.form-wrapper(data-validate)
+				form.log-in-form(action="#", method="post")
+					fieldset.screen__form-fieldset.screen02__form-fieldset
+						+custom-input(data.form.firstName).screen__form-input.screen02__form-input.screen__form-input--firstName(data-validate-type="text")
+						+custom-input(data.form.tel).screen__form-input.screen02__form-input.screen__form-input--tel(data-validate-type="phone")
+						+custom-input(data.form.email).screen__form-input.screen02__form-input.screen__form-input--email(data-validate-type="email")
+					button.btn.btn--submit.screen__form-btn.screen02__form-btn(type="submit")=data.form.btn
+			+privacy-policy()
