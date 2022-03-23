@@ -10,7 +10,7 @@
   z-index: 10;
   margin: 0 auto;
   &__wrapper {
-    width: calc(100% - 2*25px);
+    width: calc(100% - 2 * 25px);
     max-width: 435px;
     padding: 1em 0.6em;
     background: rgba(255, 255, 255, 0.05);
@@ -58,8 +58,10 @@
         font-weight: 400;
         font-size: 0.55em;
         line-height: 160%;
-        color: #ffffff;
+        color: #fff;
         opacity: 0.5;
+        display: inline-block;
+        margin: 0.6em 0 0 0;
       }
       &.is-active {
         opacity: 0.6;

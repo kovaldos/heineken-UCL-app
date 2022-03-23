@@ -728,19 +728,19 @@ button,
 }
 
 .modal-how-to-play {
-  background-color: rgba(255, 255, 255, 0);
+  background-color: #13670B;
+  z-index: 1;
 }
 
 .modal-how-to-play .modal__content {
-  background-color: #13670B;
   padding: 9px;
+  background-color: #13670B;
 }
 
 .modal-how-to-play .modal__close-btn {
   width: 2.22em;
   height: 2.22em;
-  background: #ffffff;
-  opacity: 0.1;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   top: 0;
   right: auto;
@@ -753,6 +753,10 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.modal-how-to-play .modal__close-btn svg {
+  color: #ffffff;
 }
 
 .modal-how-to-play .how-to-play__wrapper {
@@ -1306,6 +1310,7 @@ button,
 
 .header {
   padding: 1.5em 1.61em;
+  z-index: 10;
 }
 
 .header__container {
@@ -1335,7 +1340,7 @@ button,
 }
 
 .main-nav__wrapper {
-  width: calc(100% - 2*25px);
+  width: calc(100% - 2 * 25px);
   max-width: 435px;
   padding: 1em 0.6em;
   background: rgba(255, 255, 255, 0.05);
@@ -1402,8 +1407,10 @@ button,
   font-weight: 400;
   font-size: 0.55em;
   line-height: 160%;
-  color: #ffffff;
+  color: #fff;
   opacity: 0.5;
+  display: inline-block;
+  margin: 0.6em 0 0 0;
 }
 
 .main-nav__list-link.is-active {
@@ -1611,6 +1618,39 @@ button,
   opacity: 1;
 }
 
+.screen__pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.screen__strips {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 25px;
+  right: 25px;
+  z-index: -1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[6];
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 1em;
+}
+
+.screen__strips-item {
+  background: -webkit-gradient(linear, left top, left bottom, from(#7fbd30), to(rgba(127, 189, 48, 0)));
+  background: -o-linear-gradient(top, #7fbd30 0%, rgba(127, 189, 48, 0) 100%);
+  background: linear-gradient(180deg, #7fbd30 0%, rgba(127, 189, 48, 0) 100%);
+  opacity: 0.3;
+}
+
 .screen02__form {
   margin-top: 4.5em;
 }
@@ -1638,18 +1678,6 @@ button,
 
 .screen02__form-btn {
   margin: 0.44em 0 0;
-}
-
-.screen__pic {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .screen03 {
@@ -1721,6 +1749,7 @@ button,
   min-height: 167px;
   padding: 2em 0 0;
   position: relative;
+  z-index: 2;
 }
 
 .footer__container {

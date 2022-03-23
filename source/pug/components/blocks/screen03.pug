@@ -14,9 +14,12 @@ mixin screen03 ()
 		}
 	
 	section.screen.screen03
+		.screen__strips.screen03__strips
+			- for(let i = 0; i < 6; i++)
+				.screen__strips-item.screen03__strips-item
 		.container
 			.screen__pic
-				+icon("UCL-pic", 151, 248)
+				+icon("ucl-ticket-pic", 186, 257)
 			h1.screen03__title
 				span.screen03__title-span.screen03__title-span--start=data.title.title1
 				span.screen03__title-span.screen03__title-span--middle=data.title.title2

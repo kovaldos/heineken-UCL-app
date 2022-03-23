@@ -14,12 +14,12 @@ mixin main-nav()
 					dataModal: "prizes",
 					icon: "icon-gift",
 				},
-				//- {
-				//- 	href: "#",
-				//- 	text: "Leaderboard",
-				//- 	dataModal: "leaderboard",
-				//- 	icon: "icon-article",
-				//- },
+				{
+					href: "#",
+					text: "Leaderboard",
+					dataModal: "leaderboard",
+					icon: "icon-article",
+				},
 				{
 					href: "#",
 					text: "Terms",
@@ -35,5 +35,5 @@ mixin main-nav()
 				each item in data.links
 					li.main-nav__list-item 
 						a.main-nav__list-link(href=item.href data-open-modal=item.dataModal)
-							+icon(item.icon, 32, 32).main-nav__list-link-icon
+							+icon(item.icon, 26, 26).main-nav__list-link-icon
 							span.main-nav__list-link-name=item.text

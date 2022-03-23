@@ -1,20 +1,23 @@
 .modal-how-to-play {
-	background-color: $color-transparent;
+	background-color: $color-green;
+	z-index: 1;
 	.modal__content {
-		background-color: $color-green;
 		padding: 9px;
+		background-color: $color-green;
 	}
 	.modal__close-btn {
 		width: 2.22em;
 		height: 2.22em;
-		background: $color-default-white;
-		opacity: 0.1;
+		background: rgba($color-default-white, 0.1);
 		border-radius: 12px;
 		top: 0;
 		right: auto;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		svg {
+			color: $color-default-white;
+		}
 	}
 	.how-to-play {
 		&__wrapper {
