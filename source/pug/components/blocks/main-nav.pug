@@ -19,6 +19,7 @@ mixin main-nav()
 					text: "Leaderboard",
 					dataModal: "leaderboard",
 					icon: "icon-article",
+					classModifier: "is-hidden"
 				},
 				{
 					href: "#",
@@ -33,7 +34,7 @@ mixin main-nav()
 		.main-nav__wrapper 
 			ul.main-nav__list
 				each item in data.links
-					li.main-nav__list-item 
+					li.main-nav__list-item(class=item.classModifier)
 						a.main-nav__list-link(href=item.href data-open-modal=item.dataModal)
 							+icon(item.icon, 26, 26).main-nav__list-link-icon
 							span.main-nav__list-link-name=item.text

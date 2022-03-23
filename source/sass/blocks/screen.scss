@@ -69,7 +69,7 @@
 				}
 				label input {
 					text-align: right;
-					padding: 0.95em 0.5em;
+					padding: 1.11em 0.5em 0.95em;
 				}
 				&.is-valid {
 					&::after {
@@ -99,7 +99,7 @@
 				max-width: 100%;
 				label input {
 					text-align: left;
-					padding: 0.95em 0.5em;
+					padding: 1.11em 0.5em 0.95em;
 				}
 			}
 			.custom-input__error {
