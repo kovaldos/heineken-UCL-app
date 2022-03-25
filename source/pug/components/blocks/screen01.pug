@@ -4,36 +4,44 @@ mixin screen01 ()
 			title: "Please confirm your year of birth",
 			form: {
 				month: {
-					inputType: "text",
+					inputType: "number",
 					inputName: "month",
 					inputPlaceholder: "mm",
 					inputMinLength: 2,
 					inputMaxLength: 2,
 				},
 				day: {
-					inputType: "text",
+					inputType: "number",
 					inputName: "day",
 					inputPlaceholder: "dd",
 					inputMinLength: 2,
 					inputMaxLength: 2,
 				},
 				year: {
-					inputType: "text",
+					inputType: "number",
 					inputName: "year",
 					inputPlaceholder: "yyyy",
 					inputMinLength: 4,
 					inputMaxLength: 4,
+					inputError: "<span class='custom-input__error--bold'>Users under the age of 18 </span> can’t participate in activation.",
 				},
 				btn: "confirm",
-			}
+			},
+			changeLocation: {
+				href: "page00.html",
+				text: "Change location",
+			} 
 		}
 	section.screen.screen01
 		.container.screen01__container
 			h1.screen__title=data.title
 			.screen__form.form-wrapper(data-validate)
-				form.age-control-form(action="#", method="post")
+				form.screen01__age-control-form(action="#", method="post")
 					fieldset.screen__form-fieldset
 						+custom-input(data.form.month).screen__form-input.screen__form-input--month(data-validate-type="text")
 						+custom-input(data.form.day).screen__form-input.screen__form-input--day(data-validate-type="text")
 						+custom-input(data.form.year).screen__form-input.screen__form-input--year(data-validate-type="text")
 					button.btn.btn--submit.screen__form-btn(type="submit")=data.form.btn
+			.screen__change-location.screen01__change-location.is-hidden
+				a(href=data.changeLocation.href)=data.changeLocation.text
+				+icon("change-location-icon", "100%", "100%")

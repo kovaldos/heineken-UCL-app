@@ -23,11 +23,17 @@
       top: -8px;
       left: 0;
       z-index: 1;
+      @include vp-374 {
+        top: 0;
+      }
     }
     &--right {
       z-index: 0;
       right: 0;
       top: 0;
+      @include vp-374 {
+        top: 8px;
+      }
     }
   }
 }

@@ -62,6 +62,7 @@ const initFormValidate = () => {
 
       if (!callback) {
         callback = 'base';
+        console.log(123);
       }
 
       const formValidate = new FormsValidate(wrapper, callbacks[callback]);

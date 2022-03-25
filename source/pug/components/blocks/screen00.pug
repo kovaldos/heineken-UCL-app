@@ -1,0 +1,23 @@
+mixin screen00 ()
+	-
+		const data = {
+			title: "Please confirm your year of birth",
+			form: {
+				location: {
+					inputType: "text",
+					inputName: "location",
+					inputPlaceholder: "location",
+					inputMinLength: 2,
+					inputMaxLength: 20,
+				},
+				btn: "confirm",
+			}
+		}
+	section.screen.screen00
+		.container.screen00__container
+			h1.screen__title=data.title
+			.screen__form.screen00__form.form-wrapper(data-validate)
+				form.location-form(action="#", method="post")
+					fieldset.screen__form-fieldset.screen00__form-fieldset
+						+custom-input(data.form.location).screen__form-input.screen__form-input--location.screen00__form-input.screen00__form-input--location(data-validate-type="text")
+					button.btn.btn--submit.screen__form-btn(type="submit")=data.form.btn

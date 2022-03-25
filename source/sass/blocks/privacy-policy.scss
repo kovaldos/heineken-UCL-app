@@ -1,6 +1,9 @@
 .privacy-policy {
 	margin: -1em 0 -4em;
 	padding: 0 1em;
+	position: relative;
+	z-index: 3;
+
 	&__title {
 		margin: 0;
 		padding: 0;

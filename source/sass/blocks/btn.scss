@@ -24,8 +24,8 @@
     text-transform: uppercase;
     font-style: italic;
     font-weight: 700;
-    font-size: 64px;
-    line-height: 73px;
+    font-size: calc(3em + 10px);
+    line-height: calc(100% + 9px);
     &:disabled {
       opacity: 0.1;
       pointer-events: none;
