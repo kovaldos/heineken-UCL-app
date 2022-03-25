@@ -1,0 +1,29 @@
+mixin screen04 ()
+	-
+		const data = {
+			title: {
+				title1: "Choose ",
+				title2: "your ",
+				title3: "player",
+			},
+			btn: {
+				tag: "button",
+				text: "play",
+			}
+			
+		}
+	
+	section.screen.screen04
+		.screen__strips.screen03__strips.is-scaled
+			- for(let i = 0; i < 6; i++)
+				.screen__strips-item.screen04__strips-item
+		.container.screen04__container
+			h1.screen04__title
+				span.screen04__title-span.screen04__title-span--start=data.title.title1
+				span.screen04__title-span.screen04__title-span--middle=data.title.title2
+				span.screen04__title-span.screen04__title-span--end=data.title.title3
+			.screen04__pic-wrapper
+				a(href="#").screen04__pic.screen04__pic--left
+					+picture("content", "player1", "png", 185, 508, alt="football player with ball near feet")
+				a(href="#").screen04__pic.screen04__pic--right
+					+picture("content", "player2", "png", 185, 508, alt="football player with ball near feet")

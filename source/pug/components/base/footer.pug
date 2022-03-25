@@ -18,4 +18,9 @@ mixin footer(footerMods)
       .footer__bg.footer__bg--right
         img(src=data.imgRight.src alt=data.imgRight.alt)
     .container.footer__container
-      +main-nav()
+      if (currentUrl == "page03.html")
+        +main-nav()
+      else if(currentUrl == "page04.html")
+        +main-nav()
+      else if(currentUrl == "page05.html")
+        +main-nav()

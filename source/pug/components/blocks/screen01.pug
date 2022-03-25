@@ -28,9 +28,8 @@ mixin screen01 ()
 			}
 		}
 	section.screen.screen01
-		.container
-			.screen__wrapper
-				h1.screen__title=data.title
+		.container.screen01__container
+			h1.screen__title=data.title
 			.screen__form.form-wrapper(data-validate)
 				form.age-control-form(action="#", method="post")
 					fieldset.screen__form-fieldset

@@ -1,0 +1,44 @@
+mixin screen07 ()
+	-
+		const data = {
+			points: "Your points",
+			pointsNumber: 48,
+			title: "Not bad!",
+			share: "Share on social media",
+			fb: {
+				href: "#",
+				name: "facebook",
+			},
+			twit: {
+				href: "#",
+				name: "twitter", 
+			},
+			btn: {
+				tag: "a",
+				href: "#",
+				text: "Try again",
+			},
+			text: "You can do better",
+			
+		}
+	
+	section.screen.screen07
+		.screen__strips.screen07__strips.is-scaled.is-scaled3D
+			- for(let i = 0; i < 6; i++)
+				.screen__strips-item.screen05__strips-item
+		.container.screen07__container
+			.screen07__result-wrapper
+				.screen07__result
+					.screen07__result-points
+						span.screen07__result-points-text=data.points
+						span.screen07__result-points-number=data.pointsNumber
+					.screen07__result-pic 
+						+picture("content", "ball", "png", "100%", "100%", "green ball")
+					h1.screen07__result-title=data.title 
+					.screen07__result-points-share 
+						span.screen07__result-points-share-text=data.share
+						a.screen07__result-points-share-link(href=data.fb.href)=data.fb.name
+						a.screen07__result-points-share-link(href=data.twit.href)=data.twit.name
+			+btn(data.btn).screen07__btn
+			span.screen07__text=data.text
+					

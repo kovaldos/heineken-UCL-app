@@ -1,0 +1,48 @@
+.modal-selected-player {
+	background-color: $color-transparent;
+	z-index: 1;
+	.modal__content {
+		padding: 9px;
+		background-color: $color-transparent;
+	}
+	.modal__close-btn {
+		width: 2.22em;
+		height: 2.22em;
+		background: rgba($color-default-white, 0.1);
+		border-radius: 12px;
+		top: 55px;
+		right: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		svg {
+			color: $color-default-white;
+		}
+	}
+	.selected-player {
+		&__wrapper {
+			transition: transform $trans-600;
+			transform: scale(1.55) translateY(127px);
+		}
+		&__btn {
+			position: absolute;
+			top: auto;
+			bottom: 10vh;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100%;
+			max-width: 425px;
+			font-size: 3.55em;
+			line-height: 73px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0.2em auto 0 auto;
+			font-style: italic;
+			font-weight: 700;
+			text-transform: uppercase;
+			background-color: $color-transparent;
+			border: 0;
+		}
+	}
+}

@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {initCustomSelect} from './modules/form/init-custom-select';
 import {initFormValidate} from './modules/form/init-form-validate';
 import {iniAdditionalFormValid} from './modules/form/additional-form-validate';
+import {initSelectedPlayer} from './modules/init-selected-player';
 
 // ---------------------------------
 
@@ -23,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initCustomSelect();
     initFormValidate();
     // iniAdditionalFormValid();
+    // initSelectedPlayer();
   });
 });
 

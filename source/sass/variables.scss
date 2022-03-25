@@ -15,11 +15,14 @@ $color-torch-red:                   #ff1553;
 $color-green:	                     #13670B;
 $color-venetian-red:                #E30613;
 $color-lima:   	                  #7fbd30;
+$color-mantis:   	                  #86C64B;
 
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 $color-lima-to-transparent: 			linear-gradient(180deg, $color-lima 0%, rgba($color-lima, 00) 100%);
+$color-mantis-to-green:					linear-gradient(265deg, $color-mantis 0%, $color-green 100%);
+$color-mantis-to-green-02:					linear-gradient(180deg, $color-mantis 0%, $color-green 100%);
 
 // Typography
 // ---------------------------------
@@ -32,6 +35,8 @@ $fz-default:                        18px;
 $ff-rouble:                         "Rouble", "Arial", sans-serif;
 
 $ff-placeholder:                    "Placeholder", "Arial", sans-serif;
+
+$ff-main: 									"HEINEKEN Core", "HEINEKEN Curve", sans-serif;
 
 // Animation
 // ---------------------------------

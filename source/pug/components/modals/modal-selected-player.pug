@@ -1,0 +1,12 @@
+mixin modal-selected-player()
+	-
+		const data = {
+			btn: {
+				tag: "button",
+				type: "button",
+				text: "start",
+			},
+		}
+	.selected-player__wrapper 
+		+picture("content", "selected-player", "png", 514, 1032, "player avatar")
+	+btn(data.btn).selected-player__btn

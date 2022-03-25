@@ -10,12 +10,183 @@
 // }
 
 @font-face {
+  font-family: 'HEINEKEN Core';
+  src: url('../fonts/HEINEKENCore-Light.woff2') format('woff2'),
+      url('../fonts/HEINEKENCore-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HEINEKEN Core';
+  src: url('../fonts/HEINEKENCore-LightItalic.woff2') format('woff2'),
+      url('../fonts/HEINEKENCore-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HEINEKEN Core';
+  src: url('../fonts/HEINEKENCore-ExtraBold.woff2') format('woff2'),
+      url('../fonts/HEINEKENCore-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HEINEKEN Core';
+  src: url('../fonts/HEINEKENCore-ThinItalic.woff2') format('woff2'),
+      url('../fonts/HEINEKENCore-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HEINEKEN Core';
+  src: url('../fonts/HEINEKENCore-Bold.woff2') format('woff2'),
+      url('../fonts/HEINEKENCore-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HEINEKEN Core';
+  src: url('../fonts/HEINEKENCore-Italic.woff2') format('woff2'),
+      url('../fonts/HEINEKENCore-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HEINEKEN Core';
+  src: url('../fonts/HEINEKENCore-BoldItalic.woff2') format('woff2'),
+      url('../fonts/HEINEKENCore-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HEINEKEN Curve';
+  src: url('../fonts/HEINEKENCurve-HeavyItalic.woff2') format('woff2'),
+      url('../fonts/HEINEKENCurve-HeavyItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HEINEKEN Core';
+  src: url('../fonts/HEINEKENCore.woff2') format('woff2'),
+      url('../fonts/HEINEKENCore.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HEINEKEN Curve';
+  src: url('../fonts/HEINEKENCurve-MediumItalic.woff2') format('woff2'),
+      url('../fonts/HEINEKENCurve-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HEINEKEN Curve';
+  src: url('../fonts/HEINEKENCurve-Bold.woff2') format('woff2'),
+      url('../fonts/HEINEKENCurve-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HEINEKEN Core';
+  src: url('../fonts/HEINEKENCore-Thin.woff2') format('woff2'),
+      url('../fonts/HEINEKENCore-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HEINEKEN Curve';
+  src: url('../fonts/HEINEKENCurve-BoldItalic.woff2') format('woff2'),
+      url('../fonts/HEINEKENCurve-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HEINEKEN Curve';
+  src: url('../fonts/HEINEKENCurve-Heavy.woff2') format('woff2'),
+      url('../fonts/HEINEKENCurve-Heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HEINEKEN Curve';
+  src: url('../fonts/HEINEKENCurve-Italic.woff2') format('woff2'),
+      url('../fonts/HEINEKENCurve-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HEINEKEN Curve';
+  src: url('../fonts/HEINEKENCurve-SemiBoldItalic.woff2') format('woff2'),
+      url('../fonts/HEINEKENCurve-SemiBoldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HEINEKEN Curve';
+  src: url('../fonts/HEINEKENCurve-Medium.woff2') format('woff2'),
+      url('../fonts/HEINEKENCurve-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HEINEKEN Curve';
+  src: url('../fonts/HEINEKENCurve.woff2') format('woff2'),
+      url('../fonts/HEINEKENCurve.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HEINEKEN Curve';
+  src: url('../fonts/HEINEKENCurve-SemiBold.woff2') format('woff2'),
+      url('../fonts/HEINEKENCurve-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+@font-face {
   font-style: normal;
   font-weight: 400;
   font-family: "";
 
   font-display: swap;
-  src:
-    url("../fonts/.woff2") format("woff2"),
-    url("../fonts/.woff") format("woff");
+  src: url("../fonts/.woff2") format("woff2"), url("../fonts/.woff") format("woff");
 }

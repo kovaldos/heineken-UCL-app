@@ -1,0 +1,18 @@
+mixin screen05 ()
+	-
+		const data = {
+			btn: {
+				tag: "button",
+				text: "start",
+			}
+			
+		}
+	
+	section.screen.screen05
+		.screen__strips.screen03__strips.is-scaled.is-scaled3D
+			- for(let i = 0; i < 6; i++)
+				.screen__strips-item.screen05__strips-item
+		.container.screen05__container
+			.screen05__pic-wrapper
+				+picture("content", "selected-player", "png", 514, 1032, "player avatar")
+			+btn(data.btn).screen05__btn

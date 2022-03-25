@@ -1,0 +1,21 @@
+mixin screen06 ()
+	-
+		const data = {
+			textTop: "Wait please, we are loading augmented reality experience",
+			textBottom: "For everything to work properly place the ball on a flat surface and keep your phone steady. Make sure there is good",
+			
+		}
+	
+	section.screen.screen06
+		.screen__strips.screen06__strips.is-scaled.is-scaled3D
+			- for(let i = 0; i < 6; i++)
+				.screen__strips-item.screen05__strips-item
+		.container.screen06__container
+			.screen06__text-block.screen06__text-block--top
+				p.screen06__text.screen06__text--top=data.textTop
+			.screen06__progress-bar-wrapper.progress-bar__wrapper
+				.screen06__progress-bar.progress-bar
+			.screen06__text-block.screen06__text-block--bottom
+				p.screen06__text.screen06__text--bottom=data.textBottom
+			.screen06__logo-box 
+				+icon("8wall-logo", "100%", "100%")

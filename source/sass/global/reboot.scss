@@ -15,7 +15,7 @@ html {
   font-weight: 400;
   font-size: $fz-default;
   line-height: 150%;
-  font-family: $ff-placeholder;
+  font-family: $ff-main;
   color: $color-default-white;
 
   -webkit-font-smoothing: antialiased;
@@ -30,6 +30,7 @@ html {
 }
 
 body {
+  // min-width: 320px;
   width: 100%;
   height: 100%;
   background-color: $color-green;
