@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import FormsValidate from './form-validate';
 const formWrappers = document.querySelectorAll('[data-validate]');
 
@@ -8,17 +9,39 @@ const resetForm = (form) => {
 };
 
 const baseValidationSuccessCallback = (e) => {
-  e.preventDefault();
+
   // В данном колбеке бэкендер будет писать запрос на отправку формы на сервер и обрабатывать возможные ошибки при отправке
-  resetForm(e.target);
+  let formData = new FormData(e.target);
+  let data = formData.get('month') + '/' + formData.get('day') + '/' + formData.get('year');
+  let birthDate = new Date(data);
+  let today = new Date();
+  let validAge = 568036800000; // 18 years in milliseconds
+  let oneDay = 86400000; // one day in milliseconds
+  if ((today - birthDate + oneDay) > validAge) {
+    if (e.target.querySelector('.custom-input__error').classList.contains('is-active')) {
+      e.target.querySelector('.custom-input__error').classList.remove('is-active');
+    }
+    console.log('valid age');
+    resetForm(e.target);
+  } else {
+    e.preventDefault();
+    console.log('invalid age');
+    if (!e.target.querySelector('.custom-input__error').classList.contains('is-active')) {
+      e.target.querySelector('.custom-input__error').classList.add('is-active');
+    }
+
+  }
+
 };
 
 const baseValidationErrorCallback = (e) => {
   e.preventDefault();
+
 };
 
 const customExampleValidationSuccessCallback = (e) => {
   e.preventDefault();
+
   // В данном колбеке бэкендер будет писать запрос на отправку формы на сервер и обрабатывать возможные ошибки при отправке
   resetForm(e.target);
   // eslint-disable-next-line no-console
@@ -59,10 +82,8 @@ const initFormValidate = () => {
     setCustomPhoneInputsEvent();
     formWrappers.forEach((wrapper) => {
       let callback = wrapper.dataset.callback;
-
       if (!callback) {
         callback = 'base';
-        console.log(123);
       }
 
       const formValidate = new FormsValidate(wrapper, callbacks[callback]);

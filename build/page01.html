@@ -235,22 +235,22 @@
         <section class="screen screen01">
           <div class="container screen01__container">
             <h1 class="screen__title">Please confirm your year of birth</h1>
-            <div class="screen__form form-wrapper" data-validate>
-              <form class="screen01__age-control-form" action="#" method="post">
+            <div class="screen__form screen01__form" data-validate>
+              <form class="screen01__age-control-form" action="#">
                 <fieldset class="screen__form-fieldset">
-                  <div class="custom-input screen__form-input screen__form-input--month" data-validate-type="text">
+                  <div class="custom-input screen__form-input screen__form-input--month" data-validate-type="text" data-limitations="digit">
                     <label>
-                      <input type="number" name="month" minlength="2" maxlength="2" placeholder="mm">
+                      <input type="text" name="month" minlength="2" maxlength="2" placeholder="mm">
                     </label>
                   </div>
-                  <div class="custom-input screen__form-input screen__form-input--day" data-validate-type="text">
+                  <div class="custom-input screen__form-input screen__form-input--day" data-validate-type="text" data-limitations="digit">
                     <label>
-                      <input type="number" name="day" minlength="2" maxlength="2" placeholder="dd">
+                      <input type="text" name="day" minlength="2" maxlength="2" placeholder="dd">
                     </label>
                   </div>
-                  <div class="custom-input screen__form-input screen__form-input--year" data-validate-type="text">
+                  <div class="custom-input screen__form-input screen__form-input--year" data-validate-type="text" data-limitations="digit">
                     <label>
-                      <input type="number" name="year" minlength="4" maxlength="4" placeholder="yyyy">
+                      <input type="text" name="year" minlength="4" maxlength="4" placeholder="yyyy">
                     </label>
                     <div class="custom-input__error"><span class='custom-input__error--bold'>Users under the age of 18 </span> can’t participate in activation.</div>
                   </div>

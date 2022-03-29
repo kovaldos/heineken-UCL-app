@@ -4,21 +4,21 @@ mixin screen01 ()
 			title: "Please confirm your year of birth",
 			form: {
 				month: {
-					inputType: "number",
+					inputType: "text",
 					inputName: "month",
 					inputPlaceholder: "mm",
 					inputMinLength: 2,
 					inputMaxLength: 2,
 				},
 				day: {
-					inputType: "number",
+					inputType: "text",
 					inputName: "day",
 					inputPlaceholder: "dd",
 					inputMinLength: 2,
 					inputMaxLength: 2,
 				},
 				year: {
-					inputType: "number",
+					inputType: "text",
 					inputName: "year",
 					inputPlaceholder: "yyyy",
 					inputMinLength: 4,
@@ -35,12 +35,12 @@ mixin screen01 ()
 	section.screen.screen01
 		.container.screen01__container
 			h1.screen__title=data.title
-			.screen__form.form-wrapper(data-validate)
-				form.screen01__age-control-form(action="#", method="post")
+			.screen__form.screen01__form(data-validate)
+				form.screen01__age-control-form(action="#")
 					fieldset.screen__form-fieldset
-						+custom-input(data.form.month).screen__form-input.screen__form-input--month(data-validate-type="text")
-						+custom-input(data.form.day).screen__form-input.screen__form-input--day(data-validate-type="text")
-						+custom-input(data.form.year).screen__form-input.screen__form-input--year(data-validate-type="text")
+						+custom-input(data.form.month).screen__form-input.screen__form-input--month(data-validate-type="text" data-limitations="digit")
+						+custom-input(data.form.day).screen__form-input.screen__form-input--day(data-validate-type="text" data-limitations="digit")
+						+custom-input(data.form.year).screen__form-input.screen__form-input--year(data-validate-type="text" data-limitations="digit")
 					button.btn.btn--submit.screen__form-btn(type="submit")=data.form.btn
 			.screen__change-location.screen01__change-location.is-hidden
 				a(href=data.changeLocation.href)=data.changeLocation.text

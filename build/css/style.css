@@ -1649,7 +1649,7 @@ button,
 .screen {
   width: 100%;
   height: 100%;
-  padding: 1.39em 0 0;
+  padding: 1em 0 0;
 }
 
 .screen__title {
@@ -1662,7 +1662,7 @@ button,
 }
 
 .screen__form {
-  margin: 3em 0 1em;
+  margin: 4vh 0 2vh;
   width: 100%;
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
@@ -1694,7 +1694,6 @@ button,
 }
 
 .screen__form-input label input {
-  position: absolute;
   width: 100%;
   min-height: initial;
   margin-left: 0;
@@ -1707,7 +1706,7 @@ button,
   font-size: 1em;
   line-height: calc(100% + 3px);
   text-transform: uppercase;
-  padding: 1.11em 0 0.95em;
+  padding: 1em 0 0.9em;
   border-radius: 0;
   -webkit-box-shadow: 0px 1px rgba(255, 255, 255, 0.2);
   box-shadow: 0px 1px rgba(255, 255, 255, 0.2);
@@ -1755,7 +1754,7 @@ button,
   line-height: calc(100% + 3px);
   opacity: 0.2;
   position: absolute;
-  top: 51%;
+  top: 50%;
   right: -3px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -1764,7 +1763,7 @@ button,
 
 .screen__form-input--month label input {
   text-align: right;
-  padding: 1.11em 0.5em 0.95em;
+  padding: 1em 0.5em 0.9em;
 }
 
 .screen__form-input--month.is-valid::after {
@@ -1781,7 +1780,7 @@ button,
   line-height: calc(100% + 3px);
   opacity: 0.2;
   position: absolute;
-  top: 51%;
+  top: 50%;
   right: -3px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -1798,7 +1797,7 @@ button,
 
 .screen__form-input--year label input {
   text-align: left;
-  padding: 1.11em 0.5em 0.95em;
+  padding: 1em 0.5em 0.9em;
 }
 
 .screen__form-input .custom-input__error {
@@ -1957,13 +1956,14 @@ button,
 }
 
 .screen01__age-control-form .screen__form-input .custom-input__error {
-  width: calc(14em - 2px);
-  height: calc(6em - 4px);
+  width: 210px;
+  height: 77px;
+  min-height: 77px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
   border-radius: 25px;
-  top: -3em;
+  top: -1em;
   left: 0;
   -webkit-transform: translateX(calc(-50% - 1.5em));
   -ms-transform: translateX(calc(-50% - 1.5em));
@@ -1973,6 +1973,7 @@ button,
   color: #13670B;
   text-align: center;
   padding: 1em;
+  z-index: 1;
 }
 
 .screen01__age-control-form .screen__form-input .custom-input__error--bold {
@@ -1988,11 +1989,16 @@ button,
   border-radius: 2px;
   position: absolute;
   top: auto;
-  bottom: -5px;
+  bottom: -6px;
   left: 50%;
   -webkit-transform: translateX(-50%) rotate(45deg);
   -ms-transform: translateX(-50%) rotate(45deg);
   transform: translateX(-50%) rotate(45deg);
+  z-index: -1;
+}
+
+.screen01__age-control-form .screen__form-input .custom-input__error.is-active {
+  opacity: 1;
 }
 
 .screen01__age-control-form .screen__form-input.is-invalid .custom-input__error {
@@ -2035,7 +2041,7 @@ button,
 }
 
 .screen02__form-btn {
-  margin: 0.5em 0 0;
+  margin: 0.48em 0 0;
 }
 
 .screen03 {
@@ -2492,7 +2498,7 @@ button,
 .footer__bg-wrapper {
   width: 100%;
   position: absolute;
-  top: 1em;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
@@ -2502,8 +2508,16 @@ button,
   position: absolute;
 }
 
+.footer__bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 .footer__bg--left {
   top: -8px;
+  bottom: 0;
   left: 0;
   z-index: 1;
 }
@@ -2512,6 +2526,7 @@ button,
   z-index: 0;
   right: 0;
   top: 0;
+  bottom: 0;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -2585,6 +2600,10 @@ button,
 
   .screen__form-btn {
     font-size: 2.5em;
+  }
+
+  .screen01__age-control-form .screen__form-input .custom-input__error {
+    font-size: 1em;
   }
 
   .screen06__container {
