@@ -1,0 +1,16 @@
+mixin screen08 ()
+	-
+		const data = {
+			img: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA9CAYAAADxoArXAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAKXSURBVHgB7ZuBcZswGIUfPQ+QDUImqDtB3QmSDeJOkHSC2hM0nSDuBKknMJ2g3iB0grgTkPeCSIiPYIsYyQi+u/9Asmz5IelHQj8RSJZlJzxc0iY0nbdFSptHUZTCFxJL+5u55RqeiFj5Annr2rCmbUrpMex6hr57xpbewDUU/JDZsar4jYvMHi+tPIL9mB3zz8628s5hT2292YtfidkTvuFAjGCP/sh3tASFTni4QC5WdSU4IE0Et4Zp1VtaXMqWU52wlRMcgELwHG75XJUpJ0Zxn3h6gxdHmtJ+mIsxY5lfeA/yHnCMfECFH6gqI85NWr7jjnZPi/GOyo9SsCk33hbH9NSIbuRHjmoMb8Puu67IW1BswtOV2oppq+F41ILfQlNTM9atRXdSsDAO7gtPNS3+z/TNPt/7gA5jpqYSfbWvI+u0YGFWXj+R37930nnBwnTn2MzSaglCsEGOa+etKiTBv5EvbGoXJcEINg5sSZvWlQuphUVC+1hXIDTBmplN6gqEJjjFjgcLQQk247g/gg1ndR8GJ3jXM+8QW7iWQXDoDIJdkrlBOyu3xXrZq+CoBfizX7eq0X15ivxx0EmfunRMu+7bGL4cnFboDIJDZxAcOoPg0OmD4KScCF3wktNrbbY97zOHLvjBHJ8D4IYxHDqhC9bmmoLc4iKjsyEPe6Kg17tyRu+69FML77NzfmBOaf/ggaJLr+Ae1+GOTwxe2gLdzNfoGE0Fp8hD+BUN56VrNqWp4KT0vsICHaKp4Ekp8q1J+L835KVT5E/nbd59iJHHOG7wOnrdhnu4J1ULN40w1wWK0YyU9gfuWYw4FmcmmOsK7pB3V6A3WuCtsKW5Xh+IipSZbclO0R4+ZldaEy8jn6//+eQRhs0n6MOkEEAAAAAASUVORK5CYII=",
+			title: "Please turn your deviсe",
+		}
+	
+	section.screen.screen08
+		.container.screen08__container
+			.screen08__turn-your-device
+				.screen08__turn-your-device-pic
+					img(src=data.img, alt="turn your deviсe icon")
+				h1.screen08__turn-your-device-title=data.title 
+
+
+					

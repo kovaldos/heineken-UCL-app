@@ -24,6 +24,9 @@ html {
   text-rendering: optimizeLegibility;
   // если по прежнему есть проблемы с выравниванием
   // https://transfonter.org/ - включите настройку https://prnt.sc/12rnt6g и переконвертируйте шрифт
+  @include vp-767 {
+    font-size: 22px;
+  }
   @include vp-768 {
     font-size: 22px;
   }
@@ -33,12 +36,12 @@ html {
   }
 
   @include vp-374 {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
 body {
-  // min-width: 320px;
+  min-width: 320px;
   width: 100%;
   height: 100%;
   background-color: $color-green;

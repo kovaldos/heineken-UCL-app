@@ -2,7 +2,7 @@
   width: 100%;
   min-height: 167px;
   padding: 2em 0 0;
-  position: absolute;
+  position: relative;
   bottom: 0;
   z-index: 2;
   &__container {
@@ -12,7 +12,7 @@
   &__bg-wrapper {
     width: 100%;
     position: absolute;
-    top: 0;
+    top: -100%;
     bottom: 0;
     left: 0;
     right: 0;
@@ -36,10 +36,13 @@
     &--right {
       z-index: 0;
       right: 0;
-      top: 0;
+      top: 200px;
       bottom: 0;
       @include vp-374 {
         top: 8px;
+      }
+      @include orientation {
+        top: 80px;
       }
     }
   }

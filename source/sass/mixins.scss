@@ -4,6 +4,14 @@
   }
 }
 
+// Screen orientation
+
+@mixin orientation {
+  @media screen and (orientation: landscape) {
+    @content;
+  }
+}
+
 // Desktop first
 
 @mixin vp-1919 {
